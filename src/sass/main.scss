@@ -1,0 +1,130 @@
+@import "variables";
+
+* {
+  font-family: monospace;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 1.5;
+  color: #000;
+}
+
+header {
+  width: 100%;
+  background-color: $cPrimary;
+  height: 70px;
+  border: 1px solid $cPrimaryDark;
+  margin-top: 20px;
+
+  h1 {
+    color: $cWhite;
+    text-align: left;
+    font-size: 45px;
+    margin-left: 30px;
+  }
+}
+
+main {
+  background-color: $cWhite;
+
+  .wrap {
+    padding: $padding;
+    height: 80vh;
+
+    .container {
+      height: calc(80vh - #{$padding} * 2);
+      overflow: scroll;
+      float: left;
+
+      &.list {
+        width: calc(30vw - #{$padding});
+          
+        #cl_header {
+          margin-left: 10px;
+            padding-top: 20px;
+            padding-bottom: 10px;
+        }
+
+        li {
+          list-style: none;
+          padding: 10px 0 20px;
+          border-bottom: 1px solid #efefef;
+
+          &:hover {
+            a {
+              background-color: $cPrimary;
+
+              p, span {
+                color: $cPrimaryAccent;
+              }
+            }
+          }
+
+          a {
+            text-decoration: none;
+
+            figure {
+
+              img {
+                float: left;
+                padding-right: 10px;
+              }
+
+              span {
+                font-style: italic;
+                font-size: 0.9rem;
+              }
+            }
+          }
+        }
+      }
+
+      &.details {
+        width: calc(70vw - #{$padding});
+        margin-top: 10px;
+          
+        #cd_message{
+          margin-left: 40px; 
+          margin-top: 10px;
+        }
+
+        h1 {
+          width: 100%;
+          color: #311B92;
+          margin-left: 40px;
+          font-size: 30px;
+        }
+
+        div.DOB {
+          margin-left: 40px;
+          width: 80%;
+          margin-top: 10px;
+        }
+
+        div.Location {
+          margin-top: 10px;
+          margin-left: 40px;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          width: 80%;
+          font-style: italic;
+          border-top: 1px solid $cPrimaryAccent;
+          border-bottom: 1px solid $cPrimaryAccent;
+        }
+
+        div.Info {
+          margin-left: 40px;
+          width: 80%;
+          margin-top: 30px;
+        }
+
+        img {
+          height: 150px;
+          width: 150px;
+          margin-top: 30px;
+          margin-left: 40px;
+          border: solid 2px $cPrimaryDark;
+        }
+      }
+    }
+  }
+}
